@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: bomky-nginx
+  name: bomky-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bomky-nginx
+  template:
+    metadata:
+      labels:
+        app: bomky-nginx
+    spec:
+      containers:
+        - name: bomky-nginx

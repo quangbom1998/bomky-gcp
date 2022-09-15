@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: bomky-nginx
+  name: bomky-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bomky-nginx
+  template:
+    metadata:
+      labels:
+        app: bomky-nginx
+    spec:
+      containers:
+        - image: asia-northeast1-docker.pkg.dev/bomky-357603/bomky-nginx/bomky-nginx
+          name: bomky-nginx
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
