@@ -24,3 +24,6 @@
 ```
     kubectl --kubeconfig=kubeconfig-dev describe managedcertificate managed-cert
 ```
+
+## GKE Architecture
+![GKE Architecture](/images/GKE.png "GKE")
