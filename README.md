@@ -1,6 +1,9 @@
 # bomky-gcp
 
-## Saffold
+## Domain
+[`dev.bomky.shop`](https://dev.bomky.shop)
+
+## Skaffold
 1. Build and deploy
 ```
     skaffold --kubeconfig=../kubeconfig-{env} run

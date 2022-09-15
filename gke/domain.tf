@@ -9,5 +9,5 @@ resource "google_dns_record_set" "domain" {
   type         = "A"
   managed_zone = "bomkyshop-dev"
   rrdatas      = [google_compute_global_address.global_ip.address]
-  ttl          = 21600
+  ttl          = 86400
 }

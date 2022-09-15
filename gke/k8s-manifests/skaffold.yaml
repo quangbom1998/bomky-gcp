@@ -30,4 +30,3 @@ profiles:
       kustomize:
         paths:
           - ./kustomize/overlays/dev
-      

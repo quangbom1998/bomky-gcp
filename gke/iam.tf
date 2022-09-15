@@ -1,3 +1,4 @@
+# Node Serivce Account
 resource "google_service_account" "default" {
   account_id   = "bomky-gke-node-sa"
   display_name = "GKE Node Service Account"
