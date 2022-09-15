@@ -1,0 +1,32 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+# build:
+#   tagPolicy:
+#     # This tag policy create tag 'latest'
+#     sha256: {}
+#   artifacts:
+#     - image: asia-northeast1-docker.pkg.dev/bomky-357603/bomky-nginx/bomky-nginx
+#       context: www
+# deploy:
+#   # kubectl:
+#   #   manifests:
+#   #     - deploy/*.yaml
+#   kustomize:
+#     paths:
+#       - ./overlays/dev
+
+profiles:
+  - name: profile-dev
+    activation:
+      - kubeContext: bomky-cluster-dev
+    build:
+      tagPolicy:
+        # This tag policy create tag 'latest'
+        sha256: {}
+      artifacts:
+        - image: asia-northeast1-docker.pkg.dev/bomky-357603/bomky-nginx/bomky-nginx
+          context: www
+    deploy:
+      kustomize:
+        paths:
+          - ./kustomize/overlays/dev

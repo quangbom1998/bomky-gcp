@@ -1,0 +1,6 @@
+bases:
+  - ../../base
+patches:
+  - patch_resources.yaml
+resources:
+  - managed-cert.yaml

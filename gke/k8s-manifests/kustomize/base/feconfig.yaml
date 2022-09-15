@@ -1,0 +1,9 @@
+apiVersion: networking.gke.io/v1beta1
+kind: FrontendConfig
+metadata:
+  name: ssl-redirect
+spec:
+  redirectToHttps:
+    enabled: true
+    # return a 301 redirect response code (default if responseCodeName is unspecified).
+    responseCodeName: MOVED_PERMANENTLY_DEFAULT
